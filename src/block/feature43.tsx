@@ -7,77 +7,92 @@ import {
   WandSparkles,
 } from "lucide-react";
 
-interface Reason {
-  title: string;
+import { Button } from "@/components/ui/button";
+
+interface Feature {
+  heading: string;
   description: string;
   icon: React.ReactNode;
 }
 
 interface Feature43Props {
-  heading?: string;
-  reasons?: Reason[];
+  title?: string;
+  features?: Feature[];
+  buttonText?: string;
+  buttonUrl?: string;
 }
 
 const Feature43 = ({
-  heading = "Why Work With Us?",
-  reasons = [
+  title = "Fully featured components for Shadcn UI & Tailwind",
+  features = [
     {
-      title: "Quality",
+      heading: "Quality",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe est aliquid exercitationem, quos explicabo repellat?",
+        "Built with attention to detail and best practices. Every component is thoroughly tested and follows modern React patterns for reliability and performance.",
       icon: <GitPullRequest className="size-6" />,
     },
     {
-      title: "Experience",
+      heading: "Experience",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe est aliquid exercitationem, quos explicabo repellat?",
+        "Crafted with user experience in mind. Each component is designed to be intuitive, accessible, and provide smooth interactions across all devices.",
       icon: <SquareKanban className="size-6" />,
     },
     {
-      title: "Support",
+      heading: "Support",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe est aliquid exercitationem, quos explicabo repellat?",
+        "Comprehensive documentation and community support. Get help when you need it with detailed guides, examples, and active community assistance.",
       icon: <RadioTower className="size-6" />,
     },
     {
-      title: "Innovation",
+      heading: "Innovation",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe est aliquid exercitationem, quos explicabo repellat?",
+        "Cutting-edge design patterns and modern web technologies. Stay ahead with the latest trends in UI/UX design and development practices.",
       icon: <WandSparkles className="size-6" />,
     },
     {
-      title: "Results",
+      heading: "Results",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe est aliquid exercitationem, quos explicabo repellat?",
+        "Proven track record of successful implementations. These components have been battle-tested in real-world applications and deliver consistent results.",
       icon: <Layers className="size-6" />,
     },
     {
-      title: "Efficiency",
+      heading: "Efficiency",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe est aliquid exercitationem, quos explicabo repellat?",
+        "Optimized for performance and developer productivity. Lightweight, fast-loading components that help you build faster without compromising on quality.",
       icon: <BatteryCharging className="size-6" />,
     },
   ],
+  buttonText = "More Features",
+  buttonUrl = "https://shadcnblocks.com",
 }: Feature43Props) => {
   return (
     <section className="py-32">
       <div className="container">
-        <div className="mb-10 md:mb-20">
-          <h2 className="mb-2 text-center text-3xl font-semibold lg:text-5xl">
-            {heading}
-          </h2>
-        </div>
+        {title && (
+          <div className="mx-auto mb-16 max-w-3xl text-center">
+            <h2 className="text-pretty text-4xl font-medium lg:text-5xl">
+              {title}
+            </h2>
+          </div>
+        )}
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {reasons.map((reason, i) => (
+          {features.map((feature, i) => (
             <div key={i} className="flex flex-col">
-              <div className="mb-5 flex size-16 items-center justify-center rounded-full bg-accent">
-                {reason.icon}
+              <div className="bg-accent mb-5 flex size-16 items-center justify-center rounded-full">
+                {feature.icon}
               </div>
-              <h3 className="mb-2 text-xl font-semibold">{reason.title}</h3>
-              <p className="text-muted-foreground">{reason.description}</p>
+              <h3 className="mb-2 text-xl font-semibold">{feature.heading}</h3>
+              <p className="text-muted-foreground">{feature.description}</p>
             </div>
           ))}
         </div>
+        {buttonUrl && (
+          <div className="mt-16 flex justify-center">
+            <Button size="lg" asChild>
+              <a href={buttonUrl}>{buttonText}</a>
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );

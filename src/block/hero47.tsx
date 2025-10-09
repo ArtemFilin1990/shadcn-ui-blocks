@@ -45,11 +45,11 @@ const Hero47 = ({
     <section className="bg-background py-20 lg:py-32">
       <div className="container flex flex-col items-center gap-10 lg:my-0 lg:flex-row">
         <div className="flex flex-col gap-7 lg:w-2/3">
-          <h2 className="text-5xl font-semibold text-foreground md:text-5xl lg:text-8xl">
+          <h2 className="text-foreground text-5xl font-semibold md:text-5xl lg:text-8xl">
             <span>{heading}</span>
             <span className="text-muted-foreground">{subheading}</span>
           </h2>
-          <p className="text-base text-muted-foreground md:text-lg lg:text-xl">
+          <p className="text-muted-foreground text-base md:text-lg lg:text-xl">
             {description}
           </p>
           <div className="flex flex-wrap items-start gap-5 lg:gap-7">
@@ -58,7 +58,7 @@ const Hero47 = ({
                 <div className="flex items-center gap-2">
                   <ArrowUpRight className="size-4" />
                 </div>
-                <span className="pr-6 pl-4 text-sm whitespace-nowrap lg:pr-8 lg:pl-6 lg:text-base">
+                <span className="whitespace-nowrap pl-4 pr-6 text-sm lg:pl-6 lg:pr-8 lg:text-base">
                   {buttons.primary?.text}
                 </span>
               </a>
@@ -69,7 +69,7 @@ const Hero47 = ({
           </div>
         </div>
         <div className="relative z-10">
-          <div className="absolute top-2.5 left-1/2! h-[92%]! w-[69%]! -translate-x-[52%] overflow-hidden rounded-[35px]">
+          <div className="left-1/2! h-[92%]! w-[69%]! absolute top-2.5 -translate-x-[52%] overflow-hidden rounded-[35px]">
             <img
               src={image.src}
               alt={image.alt}

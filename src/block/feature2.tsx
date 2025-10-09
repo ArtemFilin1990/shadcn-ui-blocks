@@ -6,11 +6,11 @@ interface Feature2Props {
   imageSrc: string;
   imageAlt: string;
   buttonPrimary: {
-    label: string;
+    text: string;
     href: string;
   };
   buttonSecondary: {
-    label: string;
+    text: string;
     href: string;
   };
 }
@@ -21,11 +21,11 @@ const Feature2 = ({
   imageSrc = "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
   imageAlt = "placeholder hero",
   buttonPrimary = {
-    label: "Get Started",
+    text: "Get Started",
     href: "https://shadcnblocks.com",
   },
   buttonSecondary = {
-    label: "Learn More",
+    text: "Learn More",
     href: "https://shadcnblocks.com",
   },
 }: Feature2Props) => {
@@ -39,21 +39,23 @@ const Feature2 = ({
             className="max-h-96 w-full rounded-md object-cover"
           />
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            <h1 className="my-6 mt-0 text-4xl font-semibold text-balance lg:text-5xl">
+            <h2 className="my-6 mt-0 text-balance text-4xl font-semibold lg:text-5xl">
               {title}
-            </h1>
-            <p className="mb-8 max-w-xl text-muted-foreground lg:text-lg">
-              {description}
-            </p>
+            </h2>
+            {description && (
+              <p className="text-muted-foreground mb-8 max-w-xl lg:text-lg">
+                {description}
+              </p>
+            )}
             <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
               <Button asChild>
                 <a href={buttonPrimary.href} target="_blank">
-                  {buttonPrimary.label}
+                  {buttonPrimary.text}
                 </a>
               </Button>
               <Button variant="outline" asChild>
                 <a href={buttonSecondary.href} target="_blank">
-                  {buttonSecondary.label}
+                  {buttonSecondary.text}
                 </a>
               </Button>
             </div>

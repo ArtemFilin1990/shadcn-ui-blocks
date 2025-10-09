@@ -30,17 +30,17 @@ const Pricing6 = ({
     <section className="py-32">
       <div className="container">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center">
-          <h2 className="text-4xl font-semibold text-pretty lg:text-6xl">
+          <h2 className="text-pretty text-4xl font-semibold lg:text-6xl">
             {heading}
           </h2>
-          <p className="max-w-md text-muted-foreground lg:text-xl">
+          <p className="text-muted-foreground max-w-md lg:text-xl">
             {description}
           </p>
           <div className="mx-auto flex w-full flex-col rounded-lg border p-6 sm:w-fit sm:min-w-80">
             <div className="flex justify-center">
               <span className="text-lg font-semibold">$</span>
               <span className="text-6xl font-semibold">{price}</span>
-              <span className="self-end text-muted-foreground">
+              <span className="text-muted-foreground self-end">
                 {priceSuffix}
               </span>
             </div>

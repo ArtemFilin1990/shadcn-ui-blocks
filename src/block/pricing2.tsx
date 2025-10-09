@@ -82,7 +82,7 @@ const Pricing2 = ({
     <section className="py-32">
       <div className="container">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center">
-          <h2 className="text-4xl font-semibold text-pretty lg:text-6xl">
+          <h2 className="text-pretty text-4xl font-semibold lg:text-6xl">
             {heading}
           </h2>
           <p className="text-muted-foreground lg:text-xl">{description}</p>
@@ -104,14 +104,14 @@ const Pricing2 = ({
                   <CardTitle>
                     <p>{plan.name}</p>
                   </CardTitle>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-muted-foreground text-sm">
                     {plan.description}
                   </p>
                   <div className="flex items-end">
                     <span className="text-4xl font-semibold">
                       {isYearly ? plan.yearlyPrice : plan.monthlyPrice}
                     </span>
-                    <span className="text-2xl font-semibold text-muted-foreground">
+                    <span className="text-muted-foreground text-2xl font-semibold">
                       {isYearly ? "/yr" : "/mo"}
                     </span>
                   </div>

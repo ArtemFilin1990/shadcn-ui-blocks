@@ -46,7 +46,7 @@ const Logos8 = ({
       <div className="container">
         <div className="flex flex-col items-center text-center">
           <h2 className="text-3xl font-bold">{title}</h2>
-          <p className="mt-1 text-muted-foreground">{subtitle}</p>
+          <p className="text-muted-foreground mt-1">{subtitle}</p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-6 lg:gap-12">
             {logos.map((logo, index) => (
               <img

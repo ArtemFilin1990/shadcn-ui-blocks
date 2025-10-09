@@ -38,7 +38,7 @@ const Hero115 = ({
               style={{
                 transform: "translate(-50%, -50%)",
               }}
-              className="absolute top-1/2 left-1/2 -z-10 mx-auto size-[800px] rounded-full border [mask-image:linear-gradient(to_top,transparent,transparent,white,white,white,transparent,transparent)] p-16 md:size-[1300px] md:p-32"
+              className="absolute left-1/2 top-1/2 -z-10 mx-auto size-[800px] rounded-full border p-16 [mask-image:linear-gradient(to_top,transparent,transparent,white,white,white,transparent,transparent)] md:size-[1300px] md:p-32"
             >
               <div className="size-full rounded-full border p-16 md:p-32">
                 <div className="size-full rounded-full border"></div>
@@ -47,20 +47,20 @@ const Hero115 = ({
             <span className="mx-auto flex size-16 items-center justify-center rounded-full border md:size-20">
               {icon}
             </span>
-            <h2 className="mx-auto max-w-5xl text-center text-3xl font-medium text-balance md:text-6xl">
+            <h2 className="mx-auto max-w-5xl text-balance text-center text-3xl font-medium md:text-6xl">
               {heading}
             </h2>
-            <p className="mx-auto max-w-3xl text-center text-muted-foreground md:text-lg">
+            <p className="text-muted-foreground mx-auto max-w-3xl text-center md:text-lg">
               {description}
             </p>
-            <div className="flex flex-col items-center justify-center gap-3 pt-3 pb-12">
+            <div className="flex flex-col items-center justify-center gap-3 pb-12 pt-3">
               <Button size="lg" asChild>
                 <a href={button.url}>
                   {button.text} {button.icon}
                 </a>
               </Button>
               {trustText && (
-                <div className="text-xs text-muted-foreground">{trustText}</div>
+                <div className="text-muted-foreground text-xs">{trustText}</div>
               )}
             </div>
           </div>

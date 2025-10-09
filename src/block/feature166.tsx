@@ -5,8 +5,8 @@ interface Feature {
 }
 
 interface Feature166Props {
-  heading: string;
-  description?: string;
+  title: string;
+  description: string;
   feature1: Feature;
   feature2: Feature;
   feature3: Feature;
@@ -14,7 +14,7 @@ interface Feature166Props {
 }
 
 const Feature166 = ({
-  heading = "Blocks built with Shadcn & Tailwind",
+  title = "Blocks built with Shadcn & Tailwind",
   description = "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.",
   feature1 = {
     title: "UI/UX Design",
@@ -32,13 +32,13 @@ const Feature166 = ({
     title: "Brand Integration",
     description:
       "Seamlessly incorporating your brand identity into every aspect of your website's design.",
-    image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
+    image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-3.svg",
   },
   feature4 = {
     title: "Performance Optimization",
     description:
       "Ensuring fast loading times and smooth performance through optimized code and assets.",
-    image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-2.svg",
+    image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-4.svg",
   },
 }: Feature166Props) => {
   return (
@@ -46,16 +46,16 @@ const Feature166 = ({
       <div className="container">
         <div className="mb-24 flex flex-col items-center gap-6">
           <h1 className="text-center text-3xl font-semibold lg:max-w-3xl lg:text-5xl">
-            {heading}
+            {title}
           </h1>
-          <p className="text-center text-lg font-medium text-muted-foreground md:max-w-4xl lg:text-xl">
+          <p className="text-muted-foreground text-center text-lg font-medium md:max-w-4xl lg:text-xl">
             {description}
           </p>
         </div>
         <div className="relative flex justify-center">
           <div className="border-muted2 relative flex w-full flex-col border md:w-1/2 lg:w-full">
             <div className="relative flex flex-col lg:flex-row">
-              <div className="border-muted2 flex flex-col justify-between border-b border-solid p-10 lg:w-3/5 lg:border-r lg:border-b-0">
+              <div className="border-muted2 flex flex-col justify-between border-b border-solid p-10 lg:w-3/5 lg:border-b-0 lg:border-r">
                 <h2 className="text-xl font-semibold">{feature1.title}</h2>
                 <p className="text-muted-foreground">{feature1.description}</p>
                 <img
@@ -75,7 +75,7 @@ const Feature166 = ({
               </div>
             </div>
             <div className="border-muted2 relative flex flex-col border-t border-solid lg:flex-row">
-              <div className="border-muted2 flex flex-col justify-between border-b border-solid p-10 lg:w-2/5 lg:border-r lg:border-b-0">
+              <div className="border-muted2 flex flex-col justify-between border-b border-solid p-10 lg:w-2/5 lg:border-b-0 lg:border-r">
                 <h2 className="text-xl font-semibold">{feature3.title}</h2>
                 <p className="text-muted-foreground">{feature3.description}</p>
                 <img

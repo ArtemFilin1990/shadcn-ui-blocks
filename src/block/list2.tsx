@@ -84,12 +84,12 @@ const List2 = ({
             <React.Fragment key={index}>
               <div className="grid items-center gap-4 px-4 py-5 md:grid-cols-4">
                 <div className="order-2 flex items-center gap-2 md:order-none">
-                  <span className="flex h-14 w-16 shrink-0 items-center justify-center rounded-md bg-muted">
+                  <span className="bg-muted flex h-14 w-16 shrink-0 items-center justify-center rounded-md">
                     {item.icon}
                   </span>
                   <div className="flex flex-col gap-1">
                     <h3 className="font-semibold">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-muted-foreground text-sm">
                       {item.category}
                     </p>
                   </div>
